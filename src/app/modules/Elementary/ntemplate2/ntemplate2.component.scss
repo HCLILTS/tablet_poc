@@ -1,0 +1,669 @@
+@keyframes shake {
+	10%,90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+	20%,80% {
+		transform: translate3d(2px, 0, 0);
+	}
+	30%,50%,70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+	40%,60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+@keyframes reposition {
+	0% {
+		left: var(--leftFrom,0px);
+		top: var(--rightFrom,0px);
+	}
+	100% {
+		left: var(--leftTo,500px);
+		top: var(--rightTo,500px);
+	}
+}
+@keyframes scaleit {
+	0% {
+		transform: scale(.9);
+		opacity: .0;
+	}
+	90% {
+		transform: scale(1.1);
+		opacity: .7;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+@keyframes scaleOption {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.1);
+	}
+}
+@keyframes unScaleOption {
+	0% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes moveLeft {
+	0% {
+		left: 3.2%;
+	}
+	100% {
+		left: 2%;
+	}
+}
+@keyframes moveRight {
+	0% {
+		right: 3.3%;
+	}
+	100% {
+		right: 2%;
+	}
+}
+/* @media (max-width: 1366px){
+	/*.ansBase {
+	    height: 27.5%;
+	}
+}
+@media (min-width: 800px) and (max-width: 1024px){
+/*	.ansBase {
+	    height: 28%;
+	}
+} */
+@keyframes zoomIn {
+	0% {
+		transform: scale(1.0);
+	}
+	100% {
+		transform: scale(var(--scaleValue, 1.2));
+	}
+}
+@keyframes zoomOut {
+	0% {
+		transform: scale(var(--scaleValue, 1.2));
+	}
+	100% {
+		transform: scale(1.0);
+	}
+}
+/* Modal classes */
+/*confirm modal*/
+/* .confirm_modal_content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: none;
+  border-radius: 0;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+} */
+/* #confirmModal .modal-title {
+  margin-left: 1.5%;
+} */
+/* #confirmModal .close {
+  margin: 0 1.6% 0 auto	;
+} */
+/* .modal-header{
+	padding: .5% !important;
+	height: 7vmin; 
+	position: relative;
+	top: 0;
+	width: 100%;
+	border-bottom: none !important;
+	margin-bottom: -1px;
+} */
+/* .modal-body{
+	padding:2%;	
+} */
+/* .modal-title{
+  margin-left: 3.5%;
+	height: 70%;
+} */
+/* .close {
+  height: 90%;
+  margin-right: 1.6%;
+  margin-top: -.2%;
+  cursor: pointer;
+  opacity: 1 !important;
+  margin-left: auto;
+} */
+.hideit {
+	display: none !important;
+}
+.showit {
+	display: block !important;
+}
+.dispFlex {
+	display: flex !important;
+}
+button {
+	&:focus {
+		outline: none !important;
+		outline: 0 !important;
+		outline: none;
+	}
+}
+#container {
+	position: relative;
+	padding: 0;
+	#bgImage {
+		img {
+			width: 100%;
+		}
+	}
+	#optionsBlock {
+		position: absolute;
+		top: 17%;
+		width: 82%;
+		left: 9%;
+		height: 75%;
+		display: flex;
+		justify-content: space-between;
+	}
+	#navBlock {
+		position: absolute;
+		bottom: 0;
+		left: 0%;
+		width: 100%;
+		.navBase {
+			position: relative;
+			margin: auto;
+			width: 64%;
+		}
+		.prevBtn {
+			position: absolute;
+			top: 17%;
+			cursor: pointer;
+			left: 3.2%;
+			&:hover {
+				-webkit-animation-name: moveLeft;
+				-webkit-animation-duration: .3s;
+				animation-name: moveLeft;
+				animation-duration: .3s;
+				animation-iteration-count: infinite;
+			}
+		}
+		.nextBtn {
+			position: absolute;
+			top: 17%;
+			cursor: pointer;
+			right: 3.3%;
+			&:hover {
+				-webkit-animation-name: moveLeft;
+				-webkit-animation-duration: .3s;
+				animation-name: moveLeft;
+				animation-duration: .3s;
+				animation-iteration-count: infinite;
+				-webkit-animation-name: moveRight;
+				animation-name: moveRight;
+			}
+		}
+		.ansBtn {
+			position: absolute;
+			top: 17%;
+			cursor: pointer;
+			left: 22.8%;
+			width: 15.2%;
+		}
+		.quesBlock {
+			position: absolute;
+			top: 17%;
+			left: 38.1%;
+			width: 39%;
+			img {
+				cursor: pointer;
+			}
+		}
+	}
+	#instructionBar {
+		position: absolute;
+		top: 10%;
+		width: 100%;
+		text-align: center;
+	}
+}
+.quesBase6 {
+	width: 11%;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-evenly;
+	width: 12.2%;
+	&:first-child {
+		left: 0;
+		z-index: 101;
+	}
+	&:last-child {
+		right: 0;
+		z-index: 101;
+	}
+}
+.quesBase5 {
+	width: 11%;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-evenly;
+	width: 14.65%;
+	&:first-child {
+		left: 0;
+		z-index: 101;
+	}
+	&:last-child {
+		right: 0;
+		z-index: 101;
+	}
+}
+.quesBase4 {
+	width: 11%;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-evenly;
+	width: 21%;
+	align-content: space-between;
+	width: 18%;
+	&:first-child {
+		left: 0;
+		z-index: 101;
+	}
+	&:last-child {
+		right: 0;
+		z-index: 101;
+	}
+}
+.quesBase3 {
+	width: 11%;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-evenly;
+	width: 21%;
+	align-content: space-between;
+	&:first-child {
+		left: 0;
+		z-index: 101;
+	}
+	&:last-child {
+		right: 0;
+		z-index: 101;
+	}
+}
+.ansBase {
+	width: 11%;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-evenly;
+	position: relative;
+	width: 45%;
+	height: auto;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	pointer-events: none;
+}
+#optionsBlock {
+	img {
+		position: relative;
+	}
+	.options {
+		position: relative;
+		margin: 0;
+		padding: 5px;
+		vertical-align: middle;
+		width: 100%;
+		display: inline-block;
+	}
+	.ansBase {
+		.options {
+			width: 46%;
+		}
+	}
+	.refTxt {
+		position: absolute;
+		bottom: 0%;
+		left: 0%;
+		z-index: 2;
+	}
+}
+#navBlock {
+	.prevBtn {
+		width: 19.6%;
+		img {
+			cursor: pointer;
+		}
+	}
+	.nextBtn {
+		width: 19.6%;
+		img {
+			cursor: pointer;
+		}
+	}
+}
+.quesBlockChild {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	img {
+		width: 9%;
+		margin: 0 .7%;
+	}
+	img[src*='quesIconHover.png'] {
+		width: 7%;
+		margin: 0 1.6%;
+	}
+}
+.animation-shake {
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+	animation-iteration-count: infinite;
+}
+.positionAnimation {
+	animation: reposition 0.5s ease-in;
+}
+#correctAns {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 100;
+	display: flex;
+	align-items: center;
+	background-size: contain;
+	animation: scaleit 0.2s ease-in;
+	img {
+		position: absolute;
+		width: 70%;
+	}
+}
+.rightAnsBg {
+	animation: scaleit 0.2s ease-in;
+}
+#instructionBar {
+	.instructionBase {
+		width: 60%;
+		position: relative;
+	}
+	img {
+		cursor: pointer;
+	}
+}
+.instructionBase {
+	.instructionText {
+		position: absolute;
+		top: 0%;
+		left: 0;
+	}
+}
+.optionAnimate {
+	transform: scale(1.1);
+	animation: scaleOption 0.2s linear;
+}
+.removeOptAnimation {
+	transform: scale(1.0);
+	animation: unScaleOption 0.2s linear;
+}
+#burst {
+	position: absolute;
+	z-index: 101;
+	width: 100%;
+	height: 100%;
+}
+.disableDiv {
+	pointer-events: none;
+}
+.reduceOpacity {
+	opacity: 0.5;
+	pointer-events: none;
+}
+.disablePointerEvents {
+	pointer-events: none !important;
+}
+.disableDivAudio {
+	pointer-events: none;
+}
+.disableDivWrong {
+	pointer-events: none;
+	opacity: 0.5;
+}
+.leftSelected {
+	position: absolute;
+}
+.rightSelected {
+	position: absolute;
+}
+.zoomInAnimation {
+	animation: zoomIn 0.5s linear;
+	transform: scale(var(--scaleValue, 1));
+}
+// .zoomOutAnimation {
+// 	animation: zoomOut 0.5s linear;
+// 	transform: scale(1);
+// }
+#customModal {
+	background: rgba(0,0,0,.85);
+	.optionsBlock {
+		width: 84%;
+		margin-top: 11%;
+		justify-content: center;
+		.quesImage {
+			height: 98%;
+			width: 92%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: space-between;
+		}
+	}
+	.optionsBlock.optBlock4 {
+		width: 62%;
+		margin-top: 11%;
+	}
+	.optionsBlock.optBlock5 {
+		width: 50%;
+		margin-top: 11%;
+	}
+	.optionsBlock.optBlock6 {
+		width: 42%;
+		margin-top: 11%;
+	}
+	.modal-body {
+		height: 91%;
+		flex: 1;
+		padding: 0;
+	}
+	.options {
+		position: relative;
+		margin: .7% 0;
+		div {
+			top: 0;
+			width: 100%;
+			height: 100%;
+			padding: 0 1%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			img {
+				width: 45%;
+			}
+		}
+	}
+	.modal-dialog {
+		width: 48%;
+		height: 98%;
+		margin: 0 !important;
+	}
+}
+#confirmModal {
+	background: rgba(0,0,0,.85);
+	.modal-dialog {
+		width: 50% !important;
+		max-width: 100%;
+		height: 36%;
+		display: flex;
+		justify-content: center;
+	}
+	.modal-content {
+		min-width: auto;
+		min-height: auto;
+	}
+	.modal-body {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: flex-end;
+		flex: auto !important;
+		.msgImage {
+			display: block;
+			text-align: center;
+			img {
+				width: 100%;
+			}
+		}
+		.actionButtons {
+			text-align: center;
+			margin: 3% 0 2%;
+			width: 100%;
+			button {
+				border: none;
+				background: transparent;
+				padding: 0;
+				margin: 0;
+				width: 18%;
+			}
+			img {
+				max-width: 80%;
+			}
+		}
+	}
+	.modal-header {
+		top: 0;
+	}
+	.bodyText {
+		position: absolute;
+		top: 30%;
+		width: 100%;
+		img {
+			width: 85%;
+		}
+	}
+	.modal-footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 15px;
+		border-top: none;
+		position: absolute;
+		width: 100%;
+		bottom: 16%;
+		button {
+			width: 13%;
+			border: none;
+			background: transparent;
+		}
+	}
+	.popupModelBody {
+		padding: 0;
+	}
+}
+.displayPopup {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal {
+	position: absolute !important;
+	width: 100%;
+	height: 94.2%;
+	z-index: 999 !important;
+	justify-content: center;
+	align-items: center;
+	padding-left: 0px;
+	.instructionBase {
+		max-width: 85% !important;
+	}
+	.instructionBaseFeedback {
+		max-width: 85% !important;
+	}
+}
+.modal-content {
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 100%;
+	width: 100%;
+	top: 0;
+}
+html {
+	[type=button] {
+		-webkit-appearance: none;
+	}
+}
+.modal-body {
+	padding: 2%;
+	flex: auto !important;
+	align-items: center;
+}
+.modalBodyContent {
+	width: 29%;
+}
+.fullWidth {
+	width: 100%;
+}
+.modal-dialog {
+	.options {
+		div {
+			position: absolute;
+		}
+	}
+}
+@media (min-width: 576px) {
+	#customModal {
+		.modal-dialog {
+			max-width: 48% !important;
+		}
+	}
+}

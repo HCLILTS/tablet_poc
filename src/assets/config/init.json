@@ -1,0 +1,18 @@
+{
+	"environment": {
+		"platform": "web",
+		"__comment":"dotnet,web,electron,android",
+	"standalone": {
+	 "enabled": false,
+      "data": "{\"homePath\": \"home\",\"forwardEnabled\": true,\"autoPlay\": false,\"playerPreview\": false,\"sessionId\":\"kdfjddfk43243kjfkj\",\"videoType\":\"video/mp4\",\"files\":[{\"isDownloaded\": false,\"startAt\": 0,\"fileIcon\": \"http://localhost:8088/2022_12_15_05_01_05_952_PM_Segment 1.png\",\"chapterName\": \"Chapter 1\",\"shortCode\": \"110301\",\"description\": \"This is Chapter related Information from chapter 3 This is Chapter related Information from chapter 3 This is Chapter related Information from chapter 3 This is Chapter related Information from chapter \",\"segmentId\": 2985,\"file\": \"http://localhost:8088/EVA_CH21_D04_SEG08_ACT03_temp15/\"},{\"isDownloaded\": false,\"startAt\": 0,\"fileIcon\": \"http://localhost:8088/2022_12_15_05_01_11_302_PM_Segment 2.png\",\"chapterName\": \"Chapter 2\",\"shortCode\": \"110302\",\"description\": \"This is Chapter related Information from chapter 3 This is Chapter related Information from chapter 3 This is Chapter related Information from chapter 3 This is Chapter related Information from chapter \",\"segmentId\": 2985,\"file\": \"http://localhost:8088/EVA_CH09_D01_SEG06_ACT02_temp6/\"},{\"isDownloaded\": true,\"startAt\": 0,\"fileIcon\": \"http://localhost:8088/2022_12_15_05_01_16_986_PM_Segment 4.png\",\"chapterName\": \"Chapter 3\",\"shortCode\": \"110303\",\"description\": \"This is Chapter related Information from chapter 3 This is Chapter related Information from chapter 3 This is Chapter related Information from chapter 3 This is Chapter related Information from chapter \",\"segmentId\": 2985,\"isCompleted\": false,\"file\": \"http://localhost:8088/N8343_03/\"},{\"isDownloaded\": true,\"startAt\": 0,\"fileIcon\": \"http://localhost:8088/2022_12_15_05_01_25_145_PM_Segment 8.png\",\"chapterName\": \"Chapter 4\",\"shortCode\": \"110304\",\"description\": \"This is Chapter related Information from chapter 3 This is Chapter related Information from chapter 3 This is Chapter related Information from chapter 3 This is Chapter related Information from chapter \",\"segmentId\": 2985,\"isCompleted\": false,\"file\": \"http://localhost:8088/EVA_CH09_D02_SEG12/\"},{\"isDownloaded\": true,\"startAt\": 0,\"fileIcon\": \"http://localhost:8088/2022_12_15_05_01_25_145_PM_Segment 8.png\",\"chapterName\": \"Chapter 5\",\"shortCode\": \"110305\",\"description\": \"This is Chapter related Information from chapter 3 This is Chapter related Information from chapter 3 This is Chapter related Information from chapter 3 This is Chapter related Information from chapter \",\"segmentId\": 2985,\"isCompleted\": false,\"file\": \"http://localhost:8088/EVA_CH09_D02_SEG12/\"},{\"isDownloaded\": true,\"startAt\": 0,\"fileIcon\": \"http://localhost:8088/2022_12_15_05_01_25_145_PM_Segment 8.png\",\"chapterName\": \"Chapter 6\",\"shortCode\": \"110306\",\"description\": \"This is Chapter related Information from chapter 6\",\"segmentId\": 2985,\"isCompleted\": false,\"file\": \"http://localhost:8088/EVA_CH09_D02_SEG12/\"}]}"},
+		"lms": {
+			"enabled": false,
+			"contentInParam": false,
+			"version":{
+				"TabletPlayer":"0.0.1",
+				"flashPlayer":"1.0.1.0",
+				"htmlPlayer":"1.0.1.0"				
+			}
+		}
+	}
+}
